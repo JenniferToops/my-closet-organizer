@@ -1,0 +1,95 @@
+/************** FONTS ******************/
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@600&display=swap');
+
+/************** BODY ******************/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../imgs/bg-pic.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-size:contain;
+}
+
+/*********** HEADER ***********/
+
+header {
+  background-color: rgb(26, 26, 20);
+}
+
+/*********** JUMBOTRON SECTION **********/
+
+.jumbotron {
+    height: 500px;
+    padding: 0rem 2rem 6rem 2rem;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 252, 252);
+    border-radius: .3rem;  
+    overflow: scroll;
+  }
+
+h1 {
+    margin: 0 auto 4rem auto;
+    text-align: center;
+    color: var(--bs-dark);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 4rem;
+    text-shadow: 1px 2px rgb(150, 220, 248);
+}
+
+/************* FOOTER ****************/
+
+  footer {
+    /* background-color: var(--bs-dark); */
+    display: flex;
+    /* justify-content: center; */
+    color: var(--bs-light);
+    width: 100%;
+    margin: none;
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(26, 26, 20);
+  }
+
+  hr {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    min-width: 30%;
+    max-width: 70%; 
+    color: white;
+  }
+
+/************ LINKS & BUTTONS ***********/
+
+
+/* unvisited link */
+footer a:link {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* visited link */
+footer a:visited {
+    color: rgb(150, 220, 248);
+  }
+  
+  /* mouse over link */
+footer a:hover {
+    color: rgb(150, 220, 248);
+  }
+  
+  /* selected link */
+footer a:active {
+    color:  rgb(150, 220, 248);
+  }
+
+
+.btn {
+    box-shadow: 2px 2px  rgb(150, 220, 248);
+}
+
+.social-buttons {
+  line-height: 2.5rem;
+}
