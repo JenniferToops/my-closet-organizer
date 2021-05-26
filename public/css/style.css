@@ -57,11 +57,14 @@ h1 {
     margin: 0 auto 4rem auto;
     text-align: center;
     color: var(--bs-dark);
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    font-size: 4rem;
-    text-shadow: 1px 2px rgb(150, 220, 248);
 }
+
+/************* IMAGES *************/
+.home-img {
+  padding-top: 6rem;
+  min-width: 350px;
+}
+
 
 /************* FOOTER ****************/
 
@@ -86,8 +89,15 @@ h1 {
     color: white;
   }
 
-/************ LINKS & BUTTONS ***********/
+/************ FONTS, LINKS & BUTTONS ***********/
 
+/* cursive */
+.cursive {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 4rem;
+  text-shadow: 1px 2px rgb(150, 220, 248);
+}
 
 /* unvisited link */
 footer a:link {
