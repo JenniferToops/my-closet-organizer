@@ -1,37 +1,70 @@
 <%- include('partials/header') -%>
 <main class="container jumbotron">
+<!--------- h2  ------>
   <div class="row justify-content-center mt-5">
-    <div class="col-6">
-      <h2><%= post.title %></h2>
-      <img class="img-fluid" src="<%= post.image%>" />
-      <div class="row justify-content-between">
-        <form
-          class="col-1"
-          action="/post/likePost/<%= post.id %>?_method=PUT"
-          method="POST"
-        >
-          <button class="btn btn-dark fa fa-heart" type="submit"></button>
+    <h2 class="text-center cursive"><%= post.title %></h2>
+  </div>
+
+  <div class="row justify-content-center mt-5">
+
+  <!-------- IMAGE -------->
+    <div class="col-8">
+      <img class="img-fluid center-block d-block mx-auto img-max" src="<%= post.image%>" />
+    </div>
+
+    <!--------- POST CAPTION ---------->    
+    <div class="col-6 mt-5 text-center">
+      <p><strong><em><%= post.caption %></em></strong></p>
+    </div>
+
+<!-------- LIKES, DELETE ------->
+      <div class="row justify-content-center mt-5">
+      <div class="col-8">
+        <!-- <ul  class="list-group list-group-horizontal-lg justify-content-center">     -->
+          <ul class="list-inline mx-auto">  
+
+<!-- LIKES -->
+
+          <li class="list-inline-item ">
+            <form
+              class="col-3"
+              action="/post/likePost/<%= post.id %>?_method=PUT"
+              method="POST"
+            >
+
+<!-- HEART BUTTON -->
+              <button id="post" class="col-2 btn btn-dark fa fa-heart" type="submit"></button>
+            </form>
+          </li>
+          <li class="list-inline-item">
+            <h3 class="col-6">Likes: <%= post.likes %></h3>
+
+<!-- DELETE button -->
+            <%if(post.user == user.id){ %>
+            <form
+              action="/post/deletePost/<%= post.id %>?_method=DELETE"
+              method="POST"
+              class="col-3"
+            >
+          </li>
+          <li class="list-inline-item">
+          <button id="post" class="btn btn-dark fa fa-trash" type="submit"></button>
         </form>
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
-        <%if(post.user == user.id){ %>
-        <form
-          action="/post/deletePost/<%= post.id %>?_method=DELETE"
-          method="POST"
-          class="col-3"
-        >
-          <button class="btn btn-dark fa fa-trash" type="submit"></button>
-        </form>
-        <%}%>
+          <%}%>
+        </li>
+        </ul>
       </div>
     </div>
+
+<!------- PROFILE & FEED BUTTONS -->
+
     <div class="col-3 mt-5">
-      <p><%= post.caption %></p>
+      <a class="btn btn-dark" href="/profile">Return to Profile</a>
+      <a class="btn btn-dark" href="/feed">Return to Feed</a>
     </div>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
-    </div>
+
   </div>
+
 </main>
 
 <%- include('partials/footer') -%>

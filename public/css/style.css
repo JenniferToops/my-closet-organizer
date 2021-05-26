@@ -50,7 +50,7 @@ header {
     padding: 0rem 2rem 2rem 2rem;
     background-color: rgb(255, 252, 252);
     border-radius: .3rem;  
-    /* overflow: scroll; */
+    overflow: scroll;
   }
 
 h1 {
@@ -62,7 +62,17 @@ h1 {
 /************* IMAGES *************/
 .home-img {
   padding-top: 6rem;
-  min-width: 350px;
+  max-width: 100%;
+}
+
+.img-max {
+  max-width: 500px;
+  width:100%;
+}
+
+#post {
+  border: 1px solid rgb(255, 252, 252);
+  width: 6rem;
 }
 
 
