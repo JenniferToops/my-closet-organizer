@@ -9,6 +9,10 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  category: {
+    type: String,
+    require: true,
+  },
   season: {
     type: String,
     require: true,

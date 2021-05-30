@@ -26,7 +26,6 @@ module.exports = {
       console.log(err);
     }
   },
-  // double check cloudinary for collection
   getBuild: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
@@ -54,6 +53,10 @@ module.exports = {
         image: result.secure_url,
         cloudinaryId: result.public_id,
         caption: req.body.caption,
+        category: req.body.category,
+        season: req.body.season,
+        palette: req.body.palette,
+        formal: req.body.formal,
         likes: 0,
         user: req.user.id,
       });
