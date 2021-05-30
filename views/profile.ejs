@@ -1,85 +1,91 @@
 <%- include('partials/header') -%>
 <main class="container jumbotron">
   <!-- <h1>Welcome to Your Closet, <%= user.userName %></h1> -->
-  <div class="row mt-5">
+  <div class="row mt-5 justify-content-center">
       <div class="col-6">
           <div>
-              <h2 class="cursive">Add to Your Closet!</h2>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
+              <h2 class="cursive">Add to Your Closet</h2>
+              <p><strong>Welcome, </strong><%= user.userName %>!</p>
               <p><strong>Email</strong>: <%= user.email %></p>
               <a href="/logout" class="col-3 btn btn-dark">Logout</a>
           </div>
           <div class="mt-5">
-            <h2>Add a post</h2>
+            <h2>Add your clothing...</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <label for="title" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="title" name="title" placeholder="e.g., blue coat">
               </div>
               <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
+                <label for="caption" class="form-label">Description</label>
+                <textarea class="form-control" id="caption" name="caption" placeholder="e.g., dark blue embroidered bomber jacket" max-length="60"></textarea>
               </div>
-              <!-- dropdowns -->
+              <!-- dropdown menu-->
+              <div class="row  mt-5"></div>
+              <div class ="list-inline">
+          
               <!-- SEASON dropdown -->
-              <div class="dropdown">
-                <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  Season
-                </a>
-              
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="https://jennifertoops.com">Action</a></li>
-                  <li><a class="dropdown-item" href="https://linkedin.com/in/jennifertoops">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+          
+                <div class="dropdown list-inline-item">
+                  <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Season
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+                <!-- PALETTE dropdown -->
+                <div class="dropdown list-inline-item">
+                  <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Palette
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+                <!-- FORMAL/INFORMAL dropdown -->
+                <div class="dropdown list-inline-item">
+                  <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Formal/Informal
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+                </div>
               </div>
-              <!-- PALETTE dropdown -->
-              <div class="dropdown">
-                <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  Palette
-                </a>
-              
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="https://jennifertoops.com">Action</a></li>
-                  <li><a class="dropdown-item" href="https://linkedin.com/in/jennifertoops">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-              <!-- FORMAL/INFORMAL dropdown -->
-              <div class="dropdown">
-                <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                  Season
-                </a>
-              
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="https://jennifertoops.com">Action</a></li>
-                  <li><a class="dropdown-item" href="https://linkedin.com/in/jennifertoops">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>              <!-- image upload -->
+              <!-- image upload -->
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
               <button type="submit" class="btn btn-dark" value="Upload">Submit</button>
             </form>
-          </div>
-      </div>
-      <div class="col-6">
-        <ul class="row list-unstyled">
+        </div>
+        <!-- </div> -->
+      <div class="col-12">
+        <!-- <div class='justify-content-around'> -->
+        <ul class="row list-unstyled w-100">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
+          <li class="col-6 mt-3">
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
+              <img class="img-fluid mw-50 mh-50 p-3" src="<%= posts[i].image%>" alt="<%= posts[i].caption%>">
             </a>
           </li>
         <% } %>
         </ul>
         <div class="row justify-content-center mt-5">
-          <a class="btn btn-dark" href="/feed">Return to Feed</a>
+          <a class="btn btn-dark w-25" href="/feed">Return to Feed</a>
         </div>  
       </div>  
     </div>
-  <!-- </div> -->
+  </div>
+
 </main>
 <%- include('partials/footer') -%>

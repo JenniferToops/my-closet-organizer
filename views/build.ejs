@@ -1,26 +1,26 @@
 <%- include('partials/header') -%>
   <div class="container jumbotron feed">
-    <div class="row  justify-content-center mt-5">
+    <div class="row justify-content-center mt-5">
       <h1 class="display-1 cursive">Build Your Outfit</h1>
 
-
+<!-- FORM (BUILD YOUR OUTFIT) -->
+    <form action="#" method="POST">
       <!-- dropdown menu (4 items) -->
-      <div class="row mt-5"></div>
-      <div class ="list-inline">
-  
+      <div class="row mt-5">
+        <div class ="list-inline justify-content-center">
+
+        <!-- Outfit Name Button -->
+        <!-- <form action="/post/createPost" enctype="multipart/form-data" method="POST"> -->
+            <div class="list-inline-item">
+                <!-- update model/controller with new schema info -->
+                <label for="outfit-name" class="form-label">Outfit Name</label>
+                <!-- update model/controller with new schema info -->
+                <input type="text" class="form-control" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
+            </div>
+
+        <!-- Season button -->
         <div class="dropdown list-inline-item">
-          <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Outfit Name
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
-  
-        <div class="dropdown list-inline-item">
-          <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-secondary dropdown-toggle btn-dark list-inline-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Season
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -29,7 +29,8 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </div>
-  
+
+        <!-- Palette button -->
         <div class="dropdown list-inline-item">
           <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Palette
@@ -40,8 +41,9 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </div>
-  
-        <div class="dropdown list-inline-item">
+
+        <!-- Formal/Informal button -->
+          <div class="dropdown list-inline-item">
           <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Formal/Informal
           </button>
@@ -51,8 +53,10 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </div>
-        </div>
-      </div>
+    </div>
+    </div>
+
+<!-- CAROUSEL SELECTION - NEED TO ADD LINKS TO CLOUDINARY ITEMS AND MONGO TITLES/DESCRIPTIONS... LOOK UP HOW TO ADD A COLLECTION OF ITEMS IN CLOUDINARY-->
 
 
 <!-- carousel 1: HATS -->
@@ -730,8 +734,7 @@
   </div>
   </section>
 
-
-
+</form>
 
 
     </div>
