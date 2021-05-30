@@ -26,6 +26,24 @@ module.exports = {
       console.log(err);
     }
   },
+  // double check cloudinary for collection
+  getBuild: async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.id);
+      res.render("build.ejs", { post: post, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  // double check cloudinary for collection
+  getSelect: async (req, res) => {
+    try {
+      const post = await Post.findById(req.params.id);
+      res.render("select.ejs", { post: post, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary

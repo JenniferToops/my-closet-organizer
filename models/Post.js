@@ -9,6 +9,18 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  season: {
+    type: String,
+    require: true,
+  },
+  palette: {
+    type: String,
+    require: true,
+  },
+  formal: {
+    type: String,
+    require: true,
+  },
   cloudinaryId: {
     type: String,
     require: true,

@@ -33,7 +33,7 @@ body {
     background-image: url("../imgs/bg-pic.jpg");
     background-repeat: repeat;
     background-position: center;
-    background-size:contain;
+    background-size: contain;
 }
 
 /*********** HEADER ***********/
@@ -70,10 +70,8 @@ h1 {
   width:100%;
 }
 
-#post {
-  border: 1px solid rgb(255, 252, 252);
-  width: 6rem;
-}
+
+
 
 
 /************* FOOTER ****************/
@@ -87,17 +85,17 @@ h1 {
     margin: 0;
     /* bottom: 0; */
     position: absolute;
-    background-color: rgba(26, 26, 20, .8);
+    background-color: rgba(26, 26, 20, .9);
   }
 
-  hr {
+  /* hr {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     min-width: 30%;
     max-width: 70%; 
     color: white;
-  }
+  } */
 
 /************ FONTS, LINKS & BUTTONS ***********/
 
@@ -107,6 +105,10 @@ h1 {
   font-weight: 600;
   font-size: 4rem;
   text-shadow: 1px 2px rgb(150, 220, 248);
+}
+
+p {
+  font-size: 2rem;
 }
 
 /* unvisited link */
@@ -136,4 +138,17 @@ footer a:active {
 
 .social-buttons {
   line-height: 2.5rem;
+}
+
+#post {
+  border: 1px solid rgb(255, 252, 252);
+  width: 6rem;
+}
+
+.post-profile {
+  margin: 0 2rem 1rem 0;
+}
+
+.feed-btn {
+  margin: 0 0 1rem 0;
 }

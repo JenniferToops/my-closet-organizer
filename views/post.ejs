@@ -18,10 +18,10 @@
     </div>
 
 <!-------- LIKES, DELETE ------->
-      <div class="row justify-content-center mt-5">
-      <div class="col-8">
+      <div class="row mt-5">
+      <div class="col-4 list-inline mx-auto">
         <!-- <ul  class="list-group list-group-horizontal-lg justify-content-center">     -->
-          <ul class="list-inline mx-auto">  
+          <ul class="list-inline justify-content-center">  
 
 <!-- LIKES -->
 
@@ -37,7 +37,7 @@
             </form>
           </li>
           <li class="list-inline-item">
-            <h3 class="col-6">Likes: <%= post.likes %></h3>
+            <h3 class="col-6 text-center">Likes: <%= post.likes %></h3>
 
 <!-- DELETE button -->
             <%if(post.user == user.id){ %>
@@ -58,9 +58,9 @@
 
 <!------- PROFILE & FEED BUTTONS -->
 
-    <div class="col-3 mt-5">
-      <a class="btn btn-dark" href="/profile">Return to Profile</a>
-      <a class="btn btn-dark" href="/feed">Return to Feed</a>
+    <div class="col-4 mt-5">
+      <a class="btn btn-dark post-profile" href="/profile">Return to Profile</a>
+      <a class="btn btn-dark feed-btn" href="/feed">Return to Feed</a>
     </div>
 
   </div>
