@@ -4,22 +4,39 @@
       <h1 class="display-1 cursive">Build Your Outfit</h1>
 
 <!-- FORM (BUILD YOUR OUTFIT) -->
-    <form action="#" method="POST">
+    <!-- <form action="#" method="POST"> -->
       <!-- dropdown menu (4 items) -->
-      <div class="row mt-5">
-        <div class ="list-inline justify-content-center">
+      <!-- <div class="row mt-5">
+        <div class ="list-inline justify-content-center"> -->
 
+       <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+       <div class="list-inline-item"></div> 
+           <!-- update model/controller with new schema info  -->
+           <label for="outfit-name" class="form-label">Outfit Name</label> 
+           <!-- update model/controller with new schema info  -->
+           <input type="text" class="form-control" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
+       </div>
+
+            <div class="btn-group">
+
+                <button type="button" class="btn  bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </button>
         <!-- Outfit Name Button -->
-        <!-- <form action="/post/createPost" enctype="multipart/form-data" method="POST"> -->
-            <div class="list-inline-item">
-                <!-- update model/controller with new schema info -->
-                <label for="outfit-name" class="form-label">Outfit Name</label>
-                <!-- update model/controller with new schema info -->
-                <input type="text" class="form-control" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
-            </div>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Hat</a></li>
+              <li><a class="dropdown-item" href="#">Accessory</a></li>
+              <li><a class="dropdown-item" href="#">Top</a></li>
+              <li><a class="dropdown-item" href="#">Bottom</a></li>
+              <li><a class="dropdown-item" href="#">Footwear</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <!-- <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+            </ul>
+
 
         <!-- Category button -->
-         <div class="dropdown list-inline-item">
+         <!-- <div class="dropdown list-inline-item">
             <button class="btn btn-secondary dropdown-toggle btn-dark list-inline-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Category
             <div class="dropdown-menu"aria-labelledby="dropdownMenuButton">
@@ -29,11 +46,48 @@
                 <a class="dropdown-item" href="#">Bottom</a>
                 <a class="dropdown-item" href="#">Footwear</a>
             </div>
-            </div>    
+            </div>     -->
 
 
         <!-- Season button -->
-        <div class="dropdown list-inline-item">
+        <button type="button" class="btn  bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Season
+          </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Spring</a></li>
+            <li><a class="dropdown-item" href="#">Summer</a></li>
+            <li><a class="dropdown-item" href="#">Fall</a></li>
+            <li><a class="dropdown-item" href="#">Winter</a></li>
+            <li><a class="dropdown-item" href="#">Footwear</a></li>
+        </ul>
+
+
+
+        <!-- <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Hat</a></li>
+            <li><a class="dropdown-item" href="#">Accessory</a></li>
+            <li><a class="dropdown-item" href="#">Top</a></li>
+            <li><a class="dropdown-item" href="#">Bottom</a></li>
+            <li><a class="dropdown-item" href="#">Footwear</a></li> -->
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <!-- <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+
+        <!-- Season button -->
+        <button type="button" class="btn bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Palette
+          </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Neutral</a></li>
+            <li><a class="dropdown-item" href="#">Deep/dark</a></li>
+            <li><a class="dropdown-item" href="#">Light</a></li>
+            <li><a class="dropdown-item" href="#">Cool</a></li>
+            <li><a class="dropdown-item" href="#">Warm</a></li>
+        </ul>
+
+
+
+
+        <!-- <div class="dropdown list-inline-item">
           <button class="btn btn-secondary dropdown-toggle btn-dark list-inline-item" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Season
           </button>
@@ -43,10 +97,10 @@
             <a class="dropdown-item" href="#">Fall</a>
             <a class="dropdown-item" href="#">Winter</a>
           </div>
-        </div>
+        </div> -->
 
         <!-- Palette button -->
-        <div class="dropdown list-inline-item">
+        <!-- <div class="dropdown list-inline-item">
           <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Palette
           </button>
@@ -58,10 +112,23 @@
             <a class="dropdown-item" href="#"></a>Warm</a>
             <a class="dropdown-item" href="#">Vibrant</a>
           </div>
-        </div>
+        </div> -->
 
         <!-- Formal/Informal button -->
-          <div class="dropdown list-inline-item">
+        <button type="button" class="btn bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Formal/informal
+          </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Athletic</a></li>
+            <li><a class="dropdown-item" href="#">Loungewear</a></li>
+            <li><a class="dropdown-item" href="#">Weekend Club</a></li>
+            <li><a class="dropdown-item" href="#">Business Casual</a></li>
+            <li><a class="dropdown-item" href="#">Formal</a></li>
+        </ul>
+
+
+
+          <!-- <div class="dropdown list-inline-item">
           <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Formal/Informal
           </button>
@@ -69,11 +136,10 @@
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
+          </div> -->
     </div>
     </div>
-
+</div>
 <!-- CAROUSEL SELECTION - NEED TO ADD LINKS TO CLOUDINARY ITEMS AND MONGO TITLES/DESCRIPTIONS... LOOK UP HOW TO ADD A COLLECTION OF ITEMS IN CLOUDINARY-->
 
 

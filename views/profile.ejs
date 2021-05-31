@@ -21,10 +21,10 @@
                 <textarea class="form-control" id="caption" name="caption" placeholder="e.g., dark blue embroidered bomber jacket" max-length="60"></textarea>
               </div>
               <!-- dropdown menu-->
-              <div class="row mt-3"></div>
+              <!-- <div class="row mt-3"></div>
               <div class ="list-inline">
           
-              <!-- SEASON dropdown -->
+               SEASON dropdown
           
                 <div class="dropdown list-inline-item mb-3">
                   <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,9 +35,9 @@
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-                </div>
+                </div> -->
                 <!-- PALETTE dropdown -->
-                <div class="dropdown list-inline-item">
+                <!-- <div class="dropdown list-inline-item">
                   <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Palette
                   </button>
@@ -46,9 +46,9 @@
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-                </div>
+                </div> -->
                 <!-- FORMAL/INFORMAL dropdown -->
-                <div class="dropdown list-inline-item">
+                <!-- <div class="dropdown list-inline-item">
                   <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Formal/Informal
                   </button>
@@ -61,7 +61,7 @@
                   </div>
                 </div>
                 </div>
-              </div>
+              </div> -->
               <!-- image upload -->
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
@@ -69,15 +69,15 @@
               </div>
               <button type="submit" class="btn btn-dark mb-5" value="Upload">Submit</button>
             </form>
-        </div>
+        </div> 
         <!-- </div> -->
       <div class="col-12">
         <!-- <div class='justify-content-around'> -->
         <ul class="row list-unstyled w-100">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 mt-3">
+          <li class="col-12 mt-3">
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid mw-50 mh-50 p-3" src="<%= posts[i].image%>" alt="<%= posts[i].caption%>">
+              <img class="img-fluid mw-100 mh-100 p-3" src="<%= posts[i].image%>" alt="<%= posts[i].caption%>">
             </a>
           </li>
         <% } %>
