@@ -1,22 +1,26 @@
+<!-- HEADER -->
 <%- include('partials/header') -%>
+
+<!-- JUMBOTRON CONTAINER -->
   <div class="container jumbotron feed">
     <div class="row justify-content-center mt-5">
+
+      <!-- HEADER -->
       <h1 class="display-1 cursive">Build Your Outfit</h1>
 
-<!-- FORM (BUILD YOUR OUTFIT) -->
+       <!-- FORM (BUILD YOUR OUTFIT) -->
        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-       <div class="list-inline-item">
-           <!-- update model/controller with new schema info  -->
-           <label for="outfit-name" class="form-label">Outfit Name</label> 
-           <!-- update model/controller with new schema info  -->
-           <input type="text" class="form-control" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
-       </div>
+          <div class="list-inline-item">
+              <!-- update model/controller with new schema info  -->
+              <label for="outfit-name" class="form-label"><strong>Outfit Name</strong></label> 
+              <!-- update model/controller with new schema info  -->
+              <input type="text" class="form-control" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
+          </div>
 
-       <!-- inline button group -->
+        <!-- inline button group -->
         <div class="btn-group">
 
-            
-<!-- category button -->
+            <!-- category button -->
             <button type="button" class="btn bg-dark text-light dropdown-toggle"data-bs-toggle="dropdown"aria-expanded="false">
               Category
             </button>
@@ -32,7 +36,7 @@
         <!-- Season button -->
         <button type="button" class="btn  bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Season
-          </button>
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Spring</a></li>
             <li><a class="dropdown-item" href="#">Summer</a></li>
@@ -44,7 +48,7 @@
         <!-- Palette button -->
         <button type="button" class="btn bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Palette
-          </button>
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Neutral</a></li>
             <li><a class="dropdown-item" href="#">Deep/dark</a></li>
@@ -56,7 +60,7 @@
         <!-- Formal/Informal button -->
         <button type="button" class="btn bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             Formal/informal
-          </button>
+        </button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Athletic</a></li>
             <li><a class="dropdown-item" href="#">Loungewear</a></li>
@@ -65,10 +69,10 @@
             <li><a class="dropdown-item" href="#">Formal</a></li>
         </ul>
 
-    </div>
-</form>
-    </div>
-</div>
+        <!-- end of inline button group -->
+        </div>
+
+
 <!-- CAROUSEL SELECTION - NEED TO ADD LINKS TO CLOUDINARY ITEMS AND MONGO TITLES/DESCRIPTIONS... LOOK UP HOW TO ADD A COLLECTION OF ITEMS IN CLOUDINARY-->
 
 
@@ -747,9 +751,9 @@
   </div>
   </section>
 
-</form>
 
-
+    </form>
     </div>
-  </div>  
+    </div>
+  
 <%- include('partials/footer') -%>
