@@ -1,78 +1,42 @@
 <%- include('partials/header') -%>
-<main class="container jumbotron">
-  <!-- <h1>Welcome to Your Closet, <%= user.userName %></h1> -->
-  <div class="row mt-5 justify-content-center">
-      <div class="col-6">
-          <div>
-              <h2 class="cursive">Add to Your Closet</h2>
-              <p><strong>Welcome, </strong><%= user.userName %>!</p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-dark">Logout</a>
+
+<!-- JUMBOTRON CONTAINER -->
+<main class="container jumbotron justify-content-center">
+
+  <div class="row justify-content-center col-sx-12 mt-5">
+              <!-- HEADER -->
+              <h1 class="justify-content-center cursive">Add to Your Closet</h2>
+              <p class="text-center">Welcome, <strong><%= user.userName %>!</strong></p>
+              <p class="text-center">Email: <strong><%= user.email %></strong></p>
+              <a href="/logout" class="center col-3 btn btn-dark ">Logout</a>
           </div>
-          <div class="mt-5">
-            <h2>Add your clothing...</h2>
+
+          <div class="row col-sx-12 justify-content-center mt-5">
+            <h2 class="text-center">Add your clothing...</h2>
             <form class="form-group" action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
+              <div class="mb-3 mx-auto col-4">
                   <label for="title" class="form-label">Name</label>
                   <input type="text" class="form-control" id="title" name="title" placeholder="e.g., blue coat">
               </div>
-              <div class="mb-3">
+              <div class="mb-3 mx-auto col-4">
                 <label for="caption" class="form-label">Description</label>
                 <textarea class="form-control" id="caption" name="caption" placeholder="e.g., dark blue embroidered bomber jacket" max-length="60"></textarea>
               </div>
-              <!-- dropdown menu-->
-              <!-- <div class="row mt-3"></div>
-              <div class ="list-inline">
-          
-               SEASON dropdown
-          
-                <div class="dropdown list-inline-item mb-3">
-                  <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Season
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div> -->
-                <!-- PALETTE dropdown -->
-                <!-- <div class="dropdown list-inline-item">
-                  <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Palette
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div> -->
-                <!-- FORMAL/INFORMAL dropdown -->
-                <!-- <div class="dropdown list-inline-item">
-                  <button class="btn btn-secondary dropdown-toggle btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Formal/Informal
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#" name="Casual">Casual</a>
-                    <a class="dropdown-item" href="#" name="Athletic">Athletic</a>
-                    <a class="dropdown-item" href="#" name="Business casual">Business casual</a>
-                    <a class="dropdown-item" href="#" name="Night out">Night out</a>
-                    <a class="dropdown-item" href="#" name="Formal">Formal</a>
-                  </div>
-                </div>
-                </div>
-              </div> -->
+  
               <!-- image upload -->
-              <div class="mb-3">
+              <div class="mb-3 mx-auto col-4">
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
-              <button type="submit" class="btn btn-dark mb-5" value="Upload">Submit</button>
+              <button type="submit" class="btn btn-dark mb-5 center" value="Upload">Submit</button>
             </form>
+
+        <!-- END FORM FORMATTING -->
         </div> 
-        <!-- </div> -->
-      <div class="col-12">
-        <!-- <div class='justify-content-around'> -->
+
+      <!-- IMAGE POST FEED -->
+      <div class="row col-xs-12 justify-content-center">
+
         <ul class="row list-unstyled w-100">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-12 mt-3">
@@ -82,12 +46,17 @@
           </li>
         <% } %>
         </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-dark w-25" href="/feed">Return to Closet Collection</a>
+        <div class="row w-50 text-nowrap mt-5">
+          <a class="btn btn-dark" href="/feed">Return to Closet Collection</a>
         </div>  
-      </div>  
-    </div>
+
+        <!-- END OF IMAGE POST FEED -->
+        </div>
+
   </div>
 
+<!-- END JUMBOTRON CONTAINER -->
 </main>
+
+<!-- FOOTER -->
 <%- include('partials/footer') -%>

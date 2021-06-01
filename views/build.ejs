@@ -3,25 +3,31 @@
 
 <!-- JUMBOTRON CONTAINER -->
   <div class="container jumbotron feed">
-    <div class="row justify-content-center mt-5">
+    <div class="row col-sx-12mt-5">
 
       <!-- HEADER -->
       <h1 class="display-1 cursive">Build Your Outfit</h1>
 
        <!-- FORM (BUILD YOUR OUTFIT) -->
+       <div class="col-sx-12">
        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+
+          <!-- format for input and inline buttons -->
+          <div class="col-sx-12">
+
+          <!-- input text field for outfit name -->
           <div class="list-inline-item">
               <!-- update model/controller with new schema info  -->
               <label for="outfit-name" class="form-label"><strong>Outfit Name</strong></label> 
               <!-- update model/controller with new schema info  -->
-              <input type="text" class="form-control" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
+              <input type="text" class="form-control col-4 mb-3" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
           </div>
 
         <!-- inline button group -->
-        <div class="btn-group">
+        <div class="row btn-group col-sx-12 justify-content-center">
 
             <!-- category button -->
-            <button type="button" class="btn bg-dark text-light dropdown-toggle"data-bs-toggle="dropdown"aria-expanded="false">
+            <button type="button" class="btn bg-dark text-light dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
               Category
             </button>
 
@@ -34,7 +40,7 @@
             </ul>
 
         <!-- Season button -->
-        <button type="button" class="btn  bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn bg-dark text-light dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
             Season
         </button>
         <ul class="dropdown-menu">
@@ -46,7 +52,7 @@
         </ul>
 
         <!-- Palette button -->
-        <button type="button" class="btn bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn bg-dark text-light dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
             Palette
         </button>
         <ul class="dropdown-menu">
@@ -58,7 +64,7 @@
         </ul>
 
         <!-- Formal/Informal button -->
-        <button type="button" class="btn bg-dark text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn bg-dark text-light text-nowrap dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
             Formal/informal
         </button>
         <ul class="dropdown-menu">
@@ -68,6 +74,9 @@
             <li><a class="dropdown-item" href="#">Business Casual</a></li>
             <li><a class="dropdown-item" href="#">Formal</a></li>
         </ul>
+        
+        <!-- end of input and inline button -->
+        </div>
 
         <!-- end of inline button group -->
         </div>
@@ -105,8 +114,7 @@
                                                   <h4 class="card-title">Special title treatment</h4>
                                                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
           
-                                              </div>
-          
+                                              </div>          
                                           </div>
                                       </div>
                                       <div class="col-md-4 mb-3">
@@ -114,8 +122,7 @@
                                               <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
                                               <div class="card-body">
                                                   <h4 class="card-title">Special title treatment</h4>
-                                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          
+                                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>          
                                               </div>
                                           </div>
                                       </div>
@@ -124,26 +131,21 @@
                                               <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
                                               <div class="card-body">
                                                   <h4 class="card-title">Special title treatment</h4>
-                                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          
+                                                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>          
                                               </div>
                                           </div>
-                                      </div>
-          
+                                      </div>          
                                   </div>
                               </div>
                               <div class="carousel-item">
                                   <div class="row">
-          
                                       <div class="col-md-4 mb-3">
                                           <div class="card">
                                               <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
                                               <div class="card-body">
                                                   <h4 class="card-title">Special title treatment</h4>
                                                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          
                                               </div>
-          
                                           </div>
                                       </div>
                                       <div class="col-md-4 mb-3">
@@ -152,7 +154,6 @@
                                               <div class="card-body">
                                                   <h4 class="card-title">Special title treatment</h4>
                                                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          
                                               </div>
                                           </div>
                                       </div>
@@ -162,25 +163,20 @@
                                               <div class="card-body">
                                                   <h4 class="card-title">Special title treatment</h4>
                                                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          
                                               </div>
                                           </div>
                                       </div>
-          
                                   </div>
                               </div>
                               <div class="carousel-item">
                                   <div class="row">
-          
                                       <div class="col-md-4 mb-3">
                                           <div class="card">
                                               <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
                                               <div class="card-body">
                                                   <h4 class="card-title">Special title treatment</h4>
                                                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          
                                               </div>
-          
                                           </div>
                                       </div>
                                       <div class="col-md-4 mb-3">
@@ -189,7 +185,6 @@
                                               <div class="card-body">
                                                   <h4 class="card-title">Special title treatment</h4>
                                                   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          
                                               </div>
                                           </div>
                                       </div>
@@ -228,7 +223,6 @@
           </div>
           <div class="col-12">
               <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-  
                   <div class="carousel-inner">
                       <div class="carousel-item active">
                           <div class="row">
@@ -718,9 +712,7 @@
                                       <div class="card-body">
                                           <h4 class="card-title">Special title treatment</h4>
                                           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
                                       </div>
-  
                                   </div>
                               </div>
                               <div class="col-md-4 mb-3">
@@ -729,7 +721,6 @@
                                       <div class="card-body">
                                           <h4 class="card-title">Special title treatment</h4>
                                           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  
                                       </div>
                                   </div>
                               </div>
@@ -749,11 +740,26 @@
           </div>
       </div>
   </div>
+
+  <!-- END OF CAROUSEL SECTION -->
   </section>
 
+    <!-- FORM SUBMIT BUTTON -->
+    <button type="submit" class="btn btn-dark col-3 mb-5"value="Upload">Submit        
+    </button>
 
+
+    <!-- END OF FORM -->
     </form>
+
+    <!-- END OF FORM STYLING -->
     </div>
+
+    <!-- END OF JUMBOTRON STYLING -->
     </div>
-  
+
+    <!-- END OF JUMBOTRON CONTAINER -->
+    </div>
+
+<!-- FOOTER -->
 <%- include('partials/footer') -%>
