@@ -14,21 +14,26 @@
           <div class="row col-sx-12 justify-content-center mt-5">
             <h2 class="text-center">Add your clothing...</h2>
             <form class="form-group" action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3 mx-auto col-4">
+              <div class="mb-3 mx-auto col-6">
                   <label for="title" class="form-label">Name</label>
                   <input type="text" class="form-control" id="title" name="title" placeholder="e.g., blue coat">
               </div>
-              <div class="mb-3 mx-auto col-4">
+              <div class="mb-3 mx-auto col-6">
                 <label for="caption" class="form-label">Description</label>
                 <textarea class="form-control" id="caption" name="caption" placeholder="e.g., dark blue embroidered bomber jacket" max-length="60"></textarea>
               </div>
   
               <!-- image upload -->
-              <div class="mb-3 mx-auto col-4">
+              <div class="mb-3 mx-auto col-6 mb-5">
                 <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
+                <input type="file" class="form-control " id="imageUpload" name="file">
               </div>
-              <button type="submit" class="btn btn-dark mb-5 center" value="Upload">Submit</button>
+
+              <!-- submit button -->
+              <div class="row justify-content-center mb-5">
+              <button type="submit" class="btn btn-dark mb-5 col-3 center" value="Upload">Submit</button>
+              </div>
+            <!-- END OF FORM -->
             </form>
 
         <!-- END FORM FORMATTING -->
@@ -37,16 +42,16 @@
       <!-- IMAGE POST FEED -->
       <div class="row col-xs-12 justify-content-center">
 
-        <ul class="row list-unstyled w-100">
+        <ul class="list-unstyled w-100">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-12 mt-3">
+          <li class="col-6 mx-auto mt-3">
             <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid mw-100 mh-100 p-3" src="<%= posts[i].image%>" alt="<%= posts[i].caption%>">
+              <img class="img-fluid mx-auto p-3" src="<%= posts[i].image%>" alt="<%= posts[i].caption%>">
             </a>
           </li>
         <% } %>
         </ul>
-        <div class="row w-50 text-nowrap mt-5">
+        <div class="row w-25 mt-5">
           <a class="btn btn-dark" href="/feed">Return to Closet Collection</a>
         </div>  
 
