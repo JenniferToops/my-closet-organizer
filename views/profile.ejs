@@ -8,7 +8,7 @@
               <h1 class="justify-content-center cursive">Add to Your Closet</h2>
               <p class="text-center">Welcome, <strong><%= user.userName %>!</strong></p>
               <p class="text-center">Email: <strong><%= user.email %></strong></p>
-              <a href="/logout" class="center col-3 btn btn-dark ">Logout</a>
+              <a href="/logout" class="center col-3 btn btn-dark">Logout</a>
           </div>
 
           <div class="row col-sx-12 justify-content-center mt-5">
@@ -28,6 +28,22 @@
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control " id="imageUpload" name="file">
               </div>
+
+              <!-- category drop-down -->
+              <div class="dropdown row col-sx-12 justify-content-center mt-5">
+              <button type="button" name="category" title="category" class="btn bg-dark text-light dropdown-toggle col-3 mb-5" data-bs-toggle="dropdown" aria-expanded="false">
+                Category
+              </button>
+  
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" name="hat">Hat</a></li>
+                <li><a class="dropdown-item" href="#" name="accessory">Accessory</a></li>
+                <li><a class="dropdown-item" href="#" name="top">Top</a></li>
+                <li><a class="dropdown-item" href="#" name="bottom">Bottom</a></li>
+                <li><a class="dropdown-item" href="#" name="footwear">Footwear</a></li>
+              </ul>
+              </div>
+
 
               <!-- submit button -->
               <div class="row justify-content-center mb-5">

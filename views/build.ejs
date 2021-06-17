@@ -2,7 +2,7 @@
 <%- include('partials/header') -%>
 
 <!-- JUMBOTRON CONTAINER -->
-  <div class="container jumbotron feed">
+  <div class="container jumbotron">
     <div class="row mt-5">
 
       <!-- HEADER -->
@@ -10,28 +10,28 @@
 
        <!-- FORM (BUILD YOUR OUTFIT) -->
        <div class="row justify-content-center col-sx-12">
-       <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+       <form action="/post/createBuild" enctype="multipart/form-data" method="POST">
 
           <!-- format for input and inline buttons -->
-          <div class="col-sx-12">
+          <div class="row col-sx-12 justify-content-center">
 
           <!-- input text field for outfit name -->
-          <div class="list-inline-item">
+          <div class="row col-5">
               <!-- update model/controller with new schema info  -->
-              <label for="outfit-name" class="form-label"><strong>Outfit Name</strong></label> 
+              <label for="outfit-name" class="form-label text-center"><strong>Outfit Name</strong></label> 
               <!-- update model/controller with new schema info  -->
-              <input type="text" class="form-control col-4 mb-3" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
+              <input type="text" class="form-control col-5 mb-3" id="outfit-name" name="outfit-name" min-length="4" max-length="20" required>
           </div>
 
         <!-- inline button group -->
-        <div class="row btn-group col-sx-12 justify-content-center">
+        <div class="row col-sx-12 justify-content-center mt-3">
 
             <!-- category button -->
             <button type="button" class="btn bg-dark text-light dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
               Category
             </button>
 
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu col-2">
               <li><a class="dropdown-item" href="#">Hat</a></li>
               <li><a class="dropdown-item" href="#">Accessory</a></li>
               <li><a class="dropdown-item" href="#">Top</a></li>
@@ -43,8 +43,8 @@
         <button type="button" class="btn bg-dark text-light dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
             Season
         </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Spring</a></li>
+        <ul class="dropdown-menu col-2">
+            <li><a class="dropdown-item" href="#" >Spring</a></li>
             <li><a class="dropdown-item" href="#">Summer</a></li>
             <li><a class="dropdown-item" href="#">Fall</a></li>
             <li><a class="dropdown-item" href="#">Winter</a></li>
@@ -55,7 +55,7 @@
         <button type="button" class="btn bg-dark text-light dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
             Palette
         </button>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu col-2">
             <li><a class="dropdown-item" href="#">Neutral</a></li>
             <li><a class="dropdown-item" href="#">Deep/dark</a></li>
             <li><a class="dropdown-item" href="#">Light</a></li>
@@ -64,10 +64,10 @@
         </ul>
 
         <!-- Formal/Informal button -->
-        <button type="button" class="btn bg-dark text-light text-nowrap dropdown-toggle col-3 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
+        <button type="button" class="btn bg-dark text-light text-nowrap dropdown-toggle col-5 mx-2 mb-3" data-bs-toggle="dropdown" aria-expanded="false">
             Formal/informal
         </button>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu col-2 ">
             <li><a class="dropdown-item" href="#">Athletic</a></li>
             <li><a class="dropdown-item" href="#">Loungewear</a></li>
             <li><a class="dropdown-item" href="#">Weekend Club</a></li>
@@ -745,9 +745,10 @@
   </section>
 
     <!-- FORM SUBMIT BUTTON -->
-    <button type="submit" class="btn btn-dark col-3 mb-5"value="Upload">Submit        
-    </button>
-
+    <div class="button row col-12 justify-content-center">
+        <button type="submit" class="center col-3 btn btn-dark" value="Upload">Submit        
+        </button>
+    </div>
 
     <!-- END OF FORM -->
     </form>
