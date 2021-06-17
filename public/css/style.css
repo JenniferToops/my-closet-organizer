@@ -42,6 +42,27 @@ header {
   background-color: rgb(26, 26, 20);
 }
 
+/* unvisited link */
+.nav-item a:link {
+  color: rgb(255, 255, 255);
+}
+
+/* visited link */
+.nav-item a:visited {
+  color: rgb(255, 255, 255);
+}
+
+/* mouse over link */
+.nav-item a:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* selected link */
+.nav-item a:active {
+  color: rgb(255, 255, 255);
+}
+
+
 /*********** JUMBOTRON SECTION **********/
 
 .jumbotron {
